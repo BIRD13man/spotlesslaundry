@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotless Laundry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url('jpg.jpg'); /* Replace with the actual image URL or local path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100vh;
+            background-color: rgba(44, 62, 80, 0.9); /* Semi-transparent dark background for readability */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .navbar .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .navbar ul li {
+            margin: 15px 0;
+        }
+
+        .navbar ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #3498db;
+        }
+
+        /* Main Content */
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        section {
+            padding: 50px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white overlay for readability */
+            border-radius: 10px;
+        }
+
+        section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        section p {
+            font-size: 18px;
+            max-width: 800px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .services-grid, .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .service-card, .pricing-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover, .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3, .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+
+        .pricing-card p {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                width: 100%;
+                height: auto;
+                position: static;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .navbar .logo {
+                margin-bottom: 0;
+            }
+
+            .navbar ul {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .navbar ul li {
+                margin: 0 10px;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            section {
+                padding: 30px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Spotless Laundry</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Home Section -->
+        <section id="home">
+            <h1>Welcome to Spotless Laundry</h1>
+            <p>Your trusted partner for clean, fresh, and spotless clothes. We offer top-notch laundry and dry cleaning services with a focus on quality and convenience.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h1>Our Services</h1>
+            <p>We provide a range of laundry services tailored to your needs.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Wash & Fold</h3>
+                    <p>Professional washing and folding for your everyday laundry.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Dry Cleaning</h3>
+                    <p>Expert care for delicate and special garments.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Ironing</h3>
+                    <p>Crisp and perfectly pressed clothes for any occasion.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Stain Removal</h3>
+                    <p>Advanced techniques to tackle tough stains.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing">
+            <h1>Pricing</h1>
+            <p>Affordable rates for premium laundry services.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Wash & Fold</h3>
+                    <p>Ghc4.50 per pound</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Dry Cleaning</h3>
+                    <p>Starting at Ghc3.50 per item</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Ironing</h3>
+                    <p>Ghc2.50 per item</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Stain Removal</h3>
+                    <p>Starting at Ghc4 per item</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h1>About Us</h1>
+            <p>At Spotless Laundry, we are committed to providing exceptional laundry services with a focus on quality, reliability, and customer satisfaction. With years of experience and state-of-the-art equipment, we ensure your clothes are treated with care and returned spotless.</p>
+            <p>We are Located at TAMALE.</p>
+            <p>Area of our Lacation is KUKUO.</p>
+            <p>You can also Call us +233 55 963 4306.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>Have questions or want to schedule a pickup? Get in touch with us!</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
